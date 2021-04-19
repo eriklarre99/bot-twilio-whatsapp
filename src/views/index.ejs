@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilio WhatsApp Api</title>
+
+    <!-- bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- favicon -->
+    <!-- <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="/img/faviconE.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="div-1">
+        <h1> Twilio WhatsApp </h1>
+        <small>WhatsApp Api from Twilio</small>
+    </div>
+
+    <div class="container77">
+        <div class="card77">
+            <form id="form">
+                <!-- <div class="wrapper">
+                    <div class="group">
+                        <input type="text" id="remitente" placeholder="Nombre... (opcional)" autocomplete="off" /><span
+                            class="highlight"></span><span class="bar"></span>
+                    </div>
+                </div> -->
+
+                <div class="wrapper">
+                    <div class="group">
+                        <textarea type="text" id="mensaje" placeholder="Mensaje..." required
+                            autocomplete="off"></textarea><span class="highlight"></span><span class="bar"></span>
+                    </div>
+                </div>
+                <small id="text-info">Deja un mensaje anónimo para Erik !</small>
+                <br>
+                <br>
+
+                <div class="wrapper">
+                    <button id="btn" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>
