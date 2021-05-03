@@ -13,8 +13,8 @@ const client = require('twilio')(accountSid, authToken);
 router.post('/message', async (req, res, next) => {
     const { remitente, mensaje, mobile } = req.body;
 
-    const mj = `*Remitente:* \n\n   ${remitente} \n\n\n*Mensaje:* \n\n   ${mensaje} \n
-    \n*Dispositivo:* \n\n   ${mobile}`;
+    const mj = `🕵️‍♂️ *Remitente:* ${remitente} \n\n📩 *Mensaje:* ${mensaje}
+    \n📱 *Dispositivo:* ${mobile}`;
     console.log(mj);
 
     client.messages
