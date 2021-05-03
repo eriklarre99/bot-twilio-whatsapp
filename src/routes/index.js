@@ -11,9 +11,10 @@ const authToken = '34f4e1710d9845f6f2e27cd39c7e58ed';
 const client = require('twilio')(accountSid, authToken);
 
 router.post('/message', async (req, res, next) => {
-    const { remitente, mensaje } = req.body;
+    const { remitente, mensaje, mobile } = req.body;
 
-    const mj = `Remitente: ${remitente} Mensaje: ${mensaje}`;
+    const mj = `*Remitente:* \n\n   ${remitente} \n\n\n*Mensaje:* \n\n   ${mensaje} \n
+    \n*Dispositivo:* \n\n   ${mobile}`;
     console.log(mj);
 
     client.messages

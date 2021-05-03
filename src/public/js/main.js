@@ -1,17 +1,23 @@
 console.log('main.js ok');
 
 const form = document.getElementById('form')
+let mobile = isMobile()
+mobile = mobile[0]
+console.log(mobile);
 
 form.addEventListener('submit', async e => {
     e.preventDefault();
 
+    if (mobile == null || mobile == undefined || mobile == '') {
+        mobile = 'No detectado.'
+    }
     // const remitente = document.getElementById('remitente').value
     const mensaje = document.getElementById('mensaje').value
 
     // if (remitente == '') {
         remitente = 'Anónimo.'
     // }
-    const data = { remitente, mensaje }
+    const data = { remitente, mensaje, mobile }
 
     try {
         const res = await fetch('/message', {
@@ -31,3 +37,14 @@ form.addEventListener('submit', async e => {
     
     form.reset();
 })
+
+function isMobile() {
+    return (
+        (navigator.userAgent.match(/Android/i)) ||
+        (navigator.userAgent.match(/webOS/i)) ||
+        (navigator.userAgent.match(/iPhone/i)) ||
+        (navigator.userAgent.match(/iPod/i)) ||
+        (navigator.userAgent.match(/iPad/i)) ||
+        (navigator.userAgent.match(/BlackBerry/i))
+    );
+}
